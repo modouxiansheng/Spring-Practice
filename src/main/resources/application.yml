@@ -8,7 +8,7 @@ spring:
 
 #spring:
 #  datasource:
-#    url: jdbc:oracle:thin:@172.16.135.252:1521/account
-#    username: query
-#    password: query_on
+#    url: jdbc:oracle:thin:@127.0.0.1:3306/mybatis
+#    username: root
+#    password: *******
 #    driver-class-name: oracle.jdbc.OracleDriver
