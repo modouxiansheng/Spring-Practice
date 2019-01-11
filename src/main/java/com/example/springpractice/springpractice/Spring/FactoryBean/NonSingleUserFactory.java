@@ -1,4 +1,4 @@
-package com.example.springpractice.springpractice.Spring.BeanFactory;
+package com.example.springpractice.springpractice.Spring.FactoryBean;
 
 import org.springframework.beans.factory.config.AbstractFactoryBean;
 

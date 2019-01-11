@@ -1,6 +1,6 @@
 package com.example.springpractice.springpractice;
 
-import com.example.springpractice.springpractice.Spring.BeanFactory.User;
+import com.example.springpractice.springpractice.Spring.FactoryBean.User;
 import org.junit.Test;
 
 import javax.annotation.Resource;

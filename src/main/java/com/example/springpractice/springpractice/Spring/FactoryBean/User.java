@@ -1,4 +1,4 @@
-package com.example.springpractice.springpractice.Spring.BeanFactory;
+package com.example.springpractice.springpractice.Spring.FactoryBean;
 
 /**
  * @program: Spring-Practice
