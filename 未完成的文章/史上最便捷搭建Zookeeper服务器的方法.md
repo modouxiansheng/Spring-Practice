@@ -1,0 +1,66 @@
+文件的目录结构如下：
+
+```
+├── docker-compose.yml
+├── zoo1
+│   ├── data
+│   └── datalog
+├── zoo2
+│   ├── data
+│   └── datalog
+└── zoo3
+    ├── data
+    └── datalog
+
+```
+
+`docker-compose.yml`文件内容如下：
+
+```
+version: '3.1'
+
+services:
+  zoo1:
+    image: zookeeper:3.4.11
+    restart: always
+    hostname: zoo1
+    container_name: zookeeper_1
+    #domainname: 
+    ports:
+      - 2181:2181
+    volumes:
+      - ./zoo1/data:/data
+      - ./zoo1/datalog:/datalog
+    environment:
+      ZOO_MY_ID: 1
+      ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=zoo2:2888:3888 server.3=zoo3:2888:3888
+
+  zoo2:
+    image: zookeeper:3.4.11
+    restart: always
+    hostname: zoo2
+    container_name: zookeeper_2
+    ports:
+      - 2182:2181
+    volumes:
+      - ./zoo2/data:/data
+      - ./zoo2/datalog:/datalog
+    environment:
+      ZOO_MY_ID: 2
+      ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=zoo2:2888:3888 server.3=zoo3:2888:3888
+
+  zoo3:
+    image: zookeeper:3.4.11
+    restart: always
+    hostname: zoo3
+    container_name: zookeeper_3
+    ports:
+      - 2183:2181
+    volumes:
+      - ./zoo3/data:/data
+      - ./zoo3/datalog:/datalog
+    environment:
+      ZOO_MY_ID: 3
+      ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=zoo2:2888:3888 server.3=zoo3:2888:3888
+
+```

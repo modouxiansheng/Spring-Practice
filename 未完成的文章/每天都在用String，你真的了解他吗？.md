@@ -1,3 +1,5 @@
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1gewplu80twj31e40ligub.jpg)
+
 > 本文关于String的知识都是基于1.8版本写的
 
 1. String pool里面存放的char数组还是String对象
